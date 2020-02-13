@@ -1,6 +1,8 @@
 <div class="container">
   <%= link_to "Back to list", cocktails_path, class:"btn btn-primary mt-3" %>
+
   <h2><%= @cocktail.name %></h2>
+
   <% @cocktail.doses.each do |dose| %>
     <li>
       <%= dose.description %> - <%= dose.ingredient.name %>
@@ -9,10 +11,36 @@
       <% end %>
     </li>
   <% end %>
-  <p>Add a new ingredient</p>
-  <%= simple_form_for [@cocktail, @dose] do |f| %>
-    <%= f.input :description %>
-    <%= f.association :ingredient %>
-    <%= f.submit %>
-  <% end %>
+
+  <div class="mt-5">
+    <h4>Add a new ingredient</h4>
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.input :description %>
+      <%= f.association :ingredient %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+
+  <div class="my-3">
+    <% @cocktail.reviews.each do |review| %>
+      <ul class="list-inline">
+        <li class="list-inline-item"><%= review.content %></li>
+        <li class="list-inline-item">
+          <% review.rating.times do %>
+            <i class="fas fa-star"></i>
+          <% end %>
+        </li>
+        <% end %>
+      </ul>
+  </div>
+
+  <div class="mt-2">
+    <h4>Add a review</h4>
+      <%= simple_form_for [ @cocktail, @review ] do |f| %>
+      <%= f.input :content %>
+      <%= f.input :rating, collection: Review::RATING%>
+      <%= f.submit %>
+      <% end %>
+  </div>
+
 </div>
