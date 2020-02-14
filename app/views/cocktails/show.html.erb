@@ -1,5 +1,5 @@
 <div class="container">
-  <%= link_to "Back to list", root_path, class:"btn btn-primary mt-3" %>
+  <%#= link_to "Back to list", root_path, class:"btn btn-primary mt-3" %>
 
   <h2><%= @cocktail.name %></h2>
 
@@ -20,6 +20,8 @@
   <% if @cocktail.photo.attached? %>
   <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
   <% end %>
+
+  <%= link_to 'delete photo', @cocktail.photo.purge %>
 
   <div class="mt-5">
     <h4>Add a new ingredient</h4>
