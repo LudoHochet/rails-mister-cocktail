@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: black;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -11,3 +11,8 @@
   width: 40px;
 }
 
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Kaushan Script', cursive;
+}
