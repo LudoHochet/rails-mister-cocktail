@@ -1,18 +1,13 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: black;
+.navbar-cocktails {
+  padding: 10px 25px;
+  border-bottom: 1px solid #29c7ac;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+span.font-italic {
+  color: #29c7ac;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: white;
-  font-family: 'Kaushan Script', cursive;
+h2.title{
+  color: rgba(100,100,100,0.6);
+  font-size: 32px;
 }

@@ -1,0 +1,28 @@
+.card-cocktail {
+  border: 1px solid rgba(150,150,150,0.3);
+  height: 200px;
+  background-color: white;
+  display: flex;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  position: realtive;
+    a {
+      color: #29c7ac;
+      font-family: 'Kaushan Script', cursive;
+      font-size: 24px;
+    }
+}
+
+#icon {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  color: #29c7ac;
+  font-size: 16px;
+}
+
+#photo-cocktail {
+  position: absolute;
+  top: 15px;
+}

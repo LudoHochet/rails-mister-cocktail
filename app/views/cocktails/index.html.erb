@@ -1,20 +1,18 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1525268323446-0505b6fe7778?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);">
-  <div class="container">
-  <h2 class="title">Chez Bibi</h2>
-  </div>
-</div>
 
-<div class="container">
-  <ul>
-    <% @cocktails.each do |cocktail| %>
-      <li><%= link_to cocktail.name.capitalize, cocktail_path(cocktail) %>
-        <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
-          <i class="fas fa-trash"></i>
-        <% end %>
-      </li>
-    <% end %>
-  </ul>
-
+<div class="container-cocktails">
+    <div class="row m-0">
+        <% @cocktails.each do |cocktail| %>
+              <div class="col-12 col-md-6 col-lg-4 p-1">
+                <div class="card-cocktail">
+                  <img class="avatar-large" id="photo-cocktail" alt="avatar-large" src="https://images.unsplash.com/photo-1546171753-97d7676e4602?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" />
+                  <%= link_to cocktail.name.capitalize, cocktail_path(cocktail) %>
+                  <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
+                    <i class="fas fa-trash" id="icon"></i>
+                  <% end %>
+                </div>
+              </div>
+            <% end %>
+    </div>
   <%#= link_to "Add a new cocktail", new_cocktail_path, class:"btn btn-primary mt-3" %>
 </div>
 

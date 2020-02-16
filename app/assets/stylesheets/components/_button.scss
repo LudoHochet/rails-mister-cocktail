@@ -1,0 +1,20 @@
+ .btn-cocktails {
+    border-radius: 20px;
+    border: 1px solid #29c7ac;
+    background-color: white;
+    color: #4a4a4a;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 20px;
+ }
+
+a.btn-cocktails {
+  padding: 5px 25px;
+  color: #29c7ac;
+  &:hover{
+    text-decoration: none;
+    color: white;
+    background-color: #29c7ac;
+    border: 1px solid white;
+  }
+}
